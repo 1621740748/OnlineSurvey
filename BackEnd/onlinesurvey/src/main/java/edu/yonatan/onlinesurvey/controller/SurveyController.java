@@ -265,7 +265,7 @@ public class SurveyController {
      * @return
      */
     @UserLoginToken
-    @GetMapping("survey/status/{surveyId}")
+    @RequestMapping(value =  {"survey/status/{surveyId}"})
     @CrossOrigin
     @Transactional(rollbackFor = Exception.class)
     public Message getSurveyStatus(@PathVariable String surveyId) {
